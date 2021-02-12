@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lat v. Wind Speed</title>
+ <!-- Bootstrap -->
+ <link href="style.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+
+    <!--Navbar adjustments-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-black" href="index.html" >Latitude Analysis Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        </div> 
+    </nav>
+</head>
+<body>
+<div class="container content"> 
+    <div class="page_inner">
+        <ul class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+        </ul>
+    </div>    
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-12">
+                <h3>Summary: Latitude Vs. Wind Speed (MPH) </h3>
+                <hr>
+                <div class="thumbnail">
+                    <img class="img-thumbnail float-left" src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_wind_speed.png" width="75%" alt="Wind Speed (MPH)">
+                </div>
+                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  </p> 
+                
+                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+            </div>
+        </div>
+
+<nav id="navbar-collapse" class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Plots</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Latitude vs:</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="temp.html">Max Temp (°F)</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="wc_index.html">Wind Speed</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+        
+</body> 
