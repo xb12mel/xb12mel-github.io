@@ -2,74 +2,174 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Latitude Analysis Dashboard</title>
- <!-- Bootstrap -->
- <!-- <link href="reset.css" rel="stylesheet"> -->
- <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>City Latitude Data</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-      <a class="navbar-brand text-black" href="index.html" >Your Changing Weather</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">    
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                      Plots
-                  </a>
-                  <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown
-                          <span class="caret">
-                              <a class="dropdown-item" href="temp.html">Max Temperature</a>
-                              <a class="dropdown-item" href="humidity.html">Humidity</a>
-                              <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                              <a class="dropdown-item" href="wind_speed.html">wind_speed</a>
-                          </span>
-                      </button>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="comparison.html">Comparison</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="data.html">Data</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
-</head> 
+<head>
+  <nav class="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="comparison.html">Plots</a>
+        <ul class="dropdown">
+          <li><a href="temp.html">Max Temp(°F)</a></li>
+          <li><a href="humidity.html">Humidity (%)</a></li>
+          <li><a href="cloudiness.html">Cloudiness (%)</a></li>
+          <li><a href="wind_speed.html">Wind Speed (MPH)</a></li>
+        </ul>
+      </li>
+      <li><a href="comparison.html">Comparison</a></li>
+    </ul>
+  </nav>
+</head>
+<hr>
 
- <body>
+</head>
+
+<body>
   <div class="container-fluid">
-    <div class="page_inner">
-      <ul class="breadcrumb">
-          <li>
-              <a href="index.html">Home</a>
-          </li>
-      </ul>
-  </div> 
-    <!-- Content here -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          Table Data
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-      </div>
-    </div>
+    <h2>Raw DataFrame</h2>
+    <p> The following data was used to create the analysis this report is based on.</p>
+    <table class= "table-responsive-sm table table-dark table-hover">
+    <thead>
+      <tr style="text-align: left">
+          <th></th>
+          <th>City</th>
+          <th>Country</th> 
+          <th>Date</th>
+          <th>Max Temp (F)</th>
+          <th>Humidity (%)</th>
+          <th>Cloudiness (%)</th>
+          <th>Wind Speed (mph)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>Husavik</td>
+          <td>IS</td>
+          <td>2021-02-06 20:10:46</td>
+          <td>30.20</td>
+          <td>80</td>
+          <td>90</td>
+          <td>2.30</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>Palmer</td>
+          <td>US</td>
+          <td>2021-02-06 20:10:46</td>
+          <td>39.20</td>
+          <td>35</td>
+          <td>20</td>
+          <td>14.97</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Cape Town</td>
+          <td>ZA</td> 
+          <td>2021-02-06 20:10:46</td> 
+          <td>73.00</td> 
+          <td>78</td> 
+          <td>20</td> 
+          <td>14.97</td> 
+        </tr> 
+       <tr> 
+         <th>3</th> 
+         <td>Tuktoyaktuk</td> 
+         <td>CA</td> 
+         <td>2021-02-06 20:08:19</td> 
+         <td>-16.60</td> 
+         <td>76</td> 
+         <td>90</td> 
+         <td>21.85</td> 
+       </tr> 
+       <tr> 
+         <th>4</th> 
+         <td>Ponta do Sol</td> 
+         <td>PT</td> 
+         <td>2021-02-06 20:10:47</td> 
+         <td>55.00</td> 
+         <td>68</td> 
+         <td>13</td> 
+         <td>1.99</td> 
+       </tr> 
+       <tr> 
+         <th>...</th> 
+         <td>...</td> 
+         <td>...</td> 
+         <td>...</td> 
+         <td>...</td> 
+         <td>...</td> 
+         <td>...</td> 
+         <td>...</td> 
+       </tr> 
+       <tr> 
+         <th>497</th> 
+         <td>Shubarshi</td> 
+         <td>KZ</td> 
+         <td>2021-02-06 20:08:08</td> 
+         <td>14.74</td> 
+         <td>95</td> 
+         <td>72</td> 
+         <td>15.79</td> 
+       </tr> 
+       <tr> 
+         <th>498</th> 
+         <td>Nantucket</td> 
+         <td>US</td> 
+         <td>2021-02-06 20:08:45</td> 
+         <td>42.80</td> 
+         <td>56</td> 
+         <td>1</td> 
+         <td>23.02</td> 
+       </tr> 
+       <tr> 
+         <th>499</th> 
+         <td>Tornio</td> 
+         <td>FI</td> 
+         <td>2021-02-06 20:11:37</td> 
+         <td>12.20</td> 
+         <td>85</td> 
+         <td>0</td> 
+         <td>6.91</td> 
+       </tr> 
+       <tr> 
+         <th>500</th> 
+         <td>Portobelo</td> 
+         <td>PA</td> 
+         <td>2021-02-06 20:11:38</td> 
+         <td>89.01</td> 
+         <td>99</td> 
+         <td>100</td> 
+         <td>10.16</td> 
+       </tr> 
+       <tr> 
+         <th>501</th> 
+         <td>Yangi Marg`ilon</td> 
+         <td>UZ</td> 
+         <td>2021-02-06 20:11:38</td> 
+         <td>42.80</td> 
+         <td>49</td> 
+         <td>100</td> 
+         <td>4.61</td> 
+       </tr> 
+     </tbody> 
+    </table> 
+    <p>502 rows × 7 columns</p> 
   </div>
-
-    
- </body>
+</body>
+<hr>
+ <footer>
+</nav> 
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+<p> Copyright Trilogy Education Services © 2021. All Rights Reserved.</p>
+</footer>
+</html>

@@ -2,29 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lat v. Cloudiness</title>
- <!-- Bootstrap -->
- <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Latitude v Cloudiness</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
 
-<!--Navbar adjustments-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <div class="page_inner">
-            <ul class="breadcrumb">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
+<head>
+    <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comparison.html">Plots</a>
+            <ul class="dropdown">
+              <li><a href="temp.html">Max Temp(°F)</a></li>
+              <li><a href="humidity.html">Humidity (%)</a></li>
+              <li><a href="wind_speed.html">Wind Speed (MPH)</a></li>
             </ul>
-        </div> 
-            <a class="navbar-brand text-black" href="index.html" >Latitude Analysis Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
-        </div> 
-    </nav>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </nav>
+    <hr>
 </head>
 <body>
   
@@ -35,12 +33,26 @@
     <hr>
     <div class="row">
         <div class="col-md-10">
-            <div class="col-md-12"><div class="thumbnail"><img class="img-thumbnail float-left" src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_cloudiness.png" width="50%" alt="Cloudiness">
-            <div class ="col-lg-6 col-mid-4"><p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  </p> 
+            <div class="col-md-12"><div class="thumbnail"><img class="img-thumbnail float-left" src="images/latitude_v_cloudiness.png" width="50%" alt="Cloudiness">
+            <div class ="col-lg-6 col-mid-4"><p>Cloud cover as it relates to latitude, often have varying degrees of complexity. On one hand, high cloud cover can mean cooler temperatures because the sun cannot heat the atmosphere. On the other hand, cloud cover can trap heat when the sun isn't shinning to keep temperatures more moderate. What we've found according to this scanner plot proves only that clouds are omnipresent.</p> 
                 
-            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p></div> 
+            <p>Should there have been a study of Temperature Vs. Cloudiness, then I believe that we would have seen a completely different result. Lower tempreatures, on average result in clearer skys while the normal convection caused from higher temperatures mean a greater amount of humidity in the air which can lead to higher cloud coverage. Therefor there is no descernable effect on cloudiness based on latitude in this analysis.</p></div> 
         
         </div>
         
     </div>
 </body> 
+<hr>
+
+</nav> 
+<footer>
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!" />
+        </a>
+    </p>
+    <p> Copyright Trilogy Education Services © 2021. All Rights Reserved.</p>
+</footer>
+</html>

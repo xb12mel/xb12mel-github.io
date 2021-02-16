@@ -2,47 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Analysis Comparison</title>
- <!-- Bootstrap -->
- <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Plot Comparisons</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
 
-<!--Navbar adjustments-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-            <a class="navbar-brand text-black" href="index.html" >Latitude Analysis Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
-        </div> 
-    </nav>
+<head>
+    <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comparison.html">Plots</a>
+            <ul class="dropdown">
+              <li><a href="temp.html">Max Temp(°F)</a></li>
+              <li><a href="humidity.html">Humidity (%)</a></li>
+              <li><a href="cloudiness.html">Cloudiness (%)</a></li>
+              <li><a href="wind_speed.html">Wind Speed (MPH)</a></li>
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </nav>
+    </head>
+    <hr>
 </head>
 <body>
-    <div class="page_inner">
-        <ul class="breadcrumb">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-        </ul>
-    </div> 
-    
-    <div class="row-fluid">
-        <div class="col-2 col-md-6">
-            <a href="temp.html"><img src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_temp.png" width="60%"  alt="temperature"></a> 
+    <div class="container-fluid">    
+        <div class="row">
+            <h3> Comparison: Latitude Vs. "X" </h3>
         </div>
-        <div class="col-2 col-md-6">          
-            <a href="humidity.html"><img src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_humidity.png" width="60%" alt="humidity"></a>
-        </div>
-
-        <div class="col-2 col-md-6">       
-            <a href="cloudiness.html"><img src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_cloudiness.png" width="60%"  alt="cloudiness"></a>
-        </div>
-        <div class="col-2 col-md-6">      
-            <a href="wind_speed.html"><img src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_wind_speed.png" width="60%"  alt="wind speed"></a>
-        </div>
-    </div>   
-
-
+<hr>
+        <div class="flex-container">
+            <div class="flex-item"><a href="temp.html"><img src="images/latitude_v_temp.png" width= 450px  alt="temperature"><figcaption><b>Max Temperature (°F)</b></figcaption></a></div>     
+            <div class="flex-item"><a href="humidity.html"><img src="images/latitude_v_humidity.png" width=450px alt="humidity"><figcaption><b>Humidity (%)</b></figcaption></a></div>                  
+            <div class="flex-item"><a href="cloudiness.html"><img src="images/latitude_v_cloudiness.png" width=450px  alt="cloudiness"><figcaption><b>Cloudiness (%)</b></figcaption></a></div>                           
+            <div class="flex-item"><a href="wind_speed.html"><img src="images/latitude_v_wind_speed.png" width= 450px  alt="wind speed"><figcaption><b>Wind Speed (MPH)</figcaption></b></a></div>                         
+            </div>
+        </div>       
 </body>
+<hr>
+<footer>
+</nav> 
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+<p> Copyright Trilogy Education Services © 2021. All Rights Reserved.</p>
+</footer>
+</html>

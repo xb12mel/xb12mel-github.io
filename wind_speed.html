@@ -2,63 +2,58 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lat v. Wind Speed</title>
- <!-- Bootstrap -->
- <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Latitude v Wind Speed</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
 
-    <!--Navbar adjustments-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand text-black" href="index.html" >Latitude Analysis Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
-        </div> 
-    </nav>
+<head>
+    <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comparison.html">Plots</a>
+            <ul class="dropdown">
+              <li><a href="temp.html">Max Temp(°F)</a></li>
+              <li><a href="humidity.html">Humidity (%)</a></li>
+              <li><a href="cloudiness.html">Cloudiness (%)</a></li>
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </nav>
+    <hr>
 </head>
 <body>
-<div class="container content"> 
-    <div class="page_inner">
-        <ul class="breadcrumb">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-        </ul>
-    </div>    
+    <div class="container content"> 
     <div class="row">
         <div class="col-md-10">
             <div class="col-md-12">
                 <h3>Summary: Latitude Vs. Wind Speed (MPH) </h3>
                 <hr>
                 <div class="thumbnail">
-                    <img class="img-thumbnail float-left" src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_wind_speed.png" width="75%" alt="Wind Speed (MPH)">
+                    <img class="img-thumbnail float-left" src="images/latitude_v_wind_speed.png" width="850" alt="Wind Speed (MPH)">
                 </div>
-                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  </p> 
+               
+                    <div class="col-md-10">
+                    <p>If the Earth didn't spin, the convection currents in the atmosphere could develop winds that would blow from the poles all the way to the equator. The Earth's rotation around its axis, however, causes the Coriolis effect. The spinning Earth deflects the wind from a straight line into a curve. The stronger the wind, the greater the curve.</p> 
                 
-                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-            </div>
+                    <p>The Coriolis effect twists the rising and falling air nearest the equator into the pattern of wind called the trade winds. In the northern hemisphere the trade winds flow from the northeast to the southwest while in the southern hemisphere the trade winds flow from the southeast to the northwest. High pressure weather systems typically result from colder air patterns while low pressure weather systems generally result from warmer air patterns. Thus closer to 0° Latitude the pressure is typically lower than those greater than ±60° latidude. Which is why Hurricans and Typhons don't form near the poles!</p>
+                    </div>
+            </div>    
         </div>
-
-<nav id="navbar-collapse" class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Plots</a>
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Latitude vs:</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="temp.html">Max Temp (°F)</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="humidity.html">Humidity</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="wc_index.html">Wind Speed</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-            </div>
-        </li>
-    </ul>
-</nav>
-        
-</body> 
+    </div>      
+</body>
+<hr>
+<footer>
+</nav> 
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+<p> Copyright Trilogy Education Services © 2021. All Rights Reserved.</p>
+</footer>
+</html> 

@@ -2,45 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lat v. Humidity</title>
- <!-- Bootstrap -->
- <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Latitude v Humidity</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link href="Stu_BootstrapComponents/media_style.css" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
 
-    <!--Navbar adjustments-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand text-black" href="index.html" >Latitude Analysis Dashboard</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
-        </div> 
-    </nav>
+<head>
+    <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comparison.html">Plots</a>
+            <ul class="dropdown">
+              <li><a href="temp.html">Max Temp(°F)</a></li>
+              <li><a href="cloudiness.html">Cloudiness (%)</a></li>
+              <li><a href="wind_speed.html">Wind Speed (MPH)</a></li>
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </nav>
+    <hr>
 </head>
   
 </head>
 <body>
-
-<div class="container content">    
-    <div class="row">
+<div class="container-fluid">    
+    <div class="column">
         <div class="col-md-10">
             <div class="col-md-12">
                 <h3>Summary: Latitude Vs. Humidity (%) </h3>
                 <hr>
                 <div class="thumbnail">
-                    <img class="img-thumbnail float-left" src="Weather/python_api_challenge-main/python-api-challenge/latitude_v_humidity.png" width="75%" alt="Humidity %">
+                    <img class="img" src="images/latitude_v_humidity.png" width="50%" alt="Humidity %">
                 </div>
                 
             </div>
         </div>
     </div>
-<div class="container content">
-    <div class="row"> Snopsis:</div>
-    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  </p> 
-                
-    <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-</div>
 
-</body>        
+    <div class="container-fluid">
+       <div class="row"> Snopsis:</div>
+       <p>Humidity is defined as the amount of water vapor in the air. If there is a lot of ware vapor in the air, the humidity will be high. Reliaive Humidity is the amount of water vapor actually suspended in the air expressed as a percentage of the maximum amount of water the air can hold at the same temperature.</p> 
+                
+       <p>We would expect that the closer to 0 latitude you are, the higher the content of water vapor suspended in the air. At extreme latitudes, the molecules move slow enough that the water molecules would fall out of suspension either as rain or snow depending on the temperature. With higher constant temperatures, the air can support the weight of more water. This scatter chart shows a higher consentration of cities with above 50% humidity clusterd within ±40° of 0 latitude.</p>
+    </div>
+
+</body>
+<hr>
+<footer>
+</nav> 
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+<p> Copyright Trilogy Education Services © 2021. All Rights Reserved.</p>
+</footer>
+</html>  
+</html>     
